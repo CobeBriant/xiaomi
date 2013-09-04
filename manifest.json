@@ -1,0 +1,19 @@
+{
+    "manifest_version" : 2,//mainfest的版本为2，必须
+
+    "name" : "小米抢购助手",
+    "description" : "用于小米抢手机页面，帮助用户进行手机的抢购",
+    "version" : "1.0",
+
+    "browser_action" : {
+        "default_icon": "mi.jpg",
+        "default_popup": "popup.html"
+    },
+     "content_scripts": [
+    {
+      "matches": ["http://www.xiaomi.com/*","https://account.xiaomi.com/pass/serviceLogin*"],
+      "js": ["jquery.js", "myscript.js"]
+    }
+    ],
+    "options_page": "options.html"
+}
